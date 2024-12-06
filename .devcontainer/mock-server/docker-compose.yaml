@@ -1,0 +1,2 @@
+include:
+  - ../../mock-server/docker-compose.yaml

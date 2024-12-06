@@ -1,0 +1,34 @@
+{
+	"name": "mock-server",
+
+	"dockerComposeFile": ["docker-compose.yaml", "docker-compose.override.yaml"],
+
+	"service": "mock-server",
+
+	"workspaceFolder": "/app",
+
+	"forwardPorts": [8000],
+
+	"shutdownAction": "stopCompose",
+
+	"updateRemoteUserUID": false,
+
+	"customizations": {
+		"vscode": {
+			"settings": {
+      			"github.copilot.advanced": {
+      			    "authProvider": "github"
+      			},
+				"extensions.verifySignature": false
+			},
+			"extensions": [
+				"ms-python.python", 
+				"ms-python.debugpy", 
+				"ms-python.vscode-pylance",
+				"ms-python.autopep8", 
+				"GitHub.copilot"
+			],
+			"window.title": "devcontainer - mock-server"
+		}
+	}
+}

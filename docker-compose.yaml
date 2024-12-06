@@ -1,0 +1,4 @@
+include:
+  - mock-server/docker-compose.yaml
+  - prometheus/docker-compose.yaml
+  - grafana/docker-compose.yaml
