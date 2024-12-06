@@ -1,0 +1,15 @@
+name: prom-test
+
+services:
+  mock-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mock-server
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+    entrypoint: "python app.py"
+    restart: unless-stopped
+    

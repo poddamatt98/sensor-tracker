@@ -1,0 +1,11 @@
+volumes:
+  grafana-data:
+
+services:
+  grafana:
+    image: docker.io/grafana/grafana-oss:latest
+    ports:
+      - 3000:3000
+    volumes:
+      - grafana-data:/var/lib/grafana
+    restart: unless-stopped

@@ -1,0 +1,5 @@
+services:
+  mock-server:  
+    entrypoint: ""
+    command: sleep infinity
+    

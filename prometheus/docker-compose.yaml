@@ -1,0 +1,13 @@
+volumes:
+  prometheus-data:
+
+services:
+  prometheus:
+    image: docker.io/prom/prometheus:latest
+    ports:
+      - 9090:9090
+    command: "--config.file=/etc/prometheus/prometheus.yaml"
+    volumes:
+      - ./config/prometheus.yaml:/etc/prometheus/prometheus.yaml:ro
+      - prometheus-data:/prometheus
+    restart: unless-stopped

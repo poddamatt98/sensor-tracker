@@ -1,0 +1,11 @@
+name: test-prometheus
+
+volumes:
+  grafana-data:
+
+services:
+  prometheus:
+
+  mock-server:
+
+  grafana:
